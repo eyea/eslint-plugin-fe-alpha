@@ -18,9 +18,9 @@ jobs:
           node-version: '18.x'
           registry-url: 'https://registry.npmjs.org'
       - run: npm install -g npm
-      - run: npm install
-      - run: npm ci
       - run: |
-        npm publish --provenance --access public
-          env:
-            NODE_AUTH_TOKEN: ${{secrets.AFUTEAM_LINT_PUBLISH_NPM_TOKEN}}
+          npm install
+          npm ci
+      - run: npm publish --provenance --access public
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.AFUTEAM_LINT_PUBLISH_NPM_TOKEN}}
