@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/eyea/eslint-plugin-fe-alpha.git"
+    "url": "git+https://github.com/eyea/eslint-plugin-fe-alpha.git"
   },
   "keywords": [
     "AfuTeam",
