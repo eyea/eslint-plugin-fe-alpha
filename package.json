@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/afu-fe/afu-eslint-rule"
+    "url": "https://github.com/eyea/eslint-plugin-fe-alpha.git"
   },
   "keywords": [
     "AfuTeam",
@@ -25,10 +25,6 @@
     "TypesSript"
   ],
   "author": "eyea <deyesea@gmail.com>",
-  "homepage": "https://github.com/afu-fe/afu-eslint-rule#readme",
-  "bugs": {
-    "url": "https://github.com/afu-fe/afu-eslint-rule/issues"
-  },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^5.56.0",
     "@typescript-eslint/parser": "^5.56.0",
