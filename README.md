@@ -3,7 +3,7 @@
 
 ```diff
 - 框架+ts的情况 需要验证下是否可按照原来的方式组合用
-
+```
 
 # @afuteam/eslint-plugin-fe-alpha
 
