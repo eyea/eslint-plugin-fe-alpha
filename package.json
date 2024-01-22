@@ -8,6 +8,7 @@
     "lint:all": "npm-run-all \"lint:*\"",
     "lint:js": "eslint .",
     "lint:test": "eslint tests/*",
+    "lint:test1": "eslint tests/*.ts --config ./lib/configs/ts/index.js",
     "test": "mocha tests --recursive"
   },
   "repository": {
