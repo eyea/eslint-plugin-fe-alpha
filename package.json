@@ -1,6 +1,6 @@
 {
   "name": "@afuteam/eslint-plugin-fe-alpha",
-  "version": "0.0.4",
+  "version": "0.0.4-alpha.1",
   "description": "AfuTeam ESLint Plugin",
   "main": "./lib/index.js",
   "exports": "./lib/index.js",
@@ -10,6 +10,9 @@
     "lint:test": "eslint tests/*",
     "lint:test1": "eslint tests/*.ts --config ./lib/configs/ts/index.js",
     "test": "mocha tests --recursive"
+  },
+  "bin": {
+    "@afuteam/eslint-plugin-fe-alpha": "./bin/index.js"
   },
   "repository": {
     "type": "git",
@@ -50,5 +53,8 @@
   "peerDependencies": {
     "eslint": ">=7"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.5.5"
+  }
 }
