@@ -1,6 +1,6 @@
 {
   "name": "@afuteam/eslint-plugin-fe-alpha",
-  "version": "0.0.5",
+  "version": "0.0.5-beta",
   "description": "AfuTeam ESLint Plugin",
   "main": "./lib/index.js",
   "exports": {
