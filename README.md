@@ -79,3 +79,9 @@ npm i eslint @afuteam/eslint-plugin-fe-alpha --save-dev
   "extends": ["plugin:@afuteam/fe-alpha/vue3-ts"]
 }
 ```
+
+## npx
+自测阶段
+```sh
+npx @afuteam/eslint-plugin-fe-alpha --type=react-ts --path=src/
+```

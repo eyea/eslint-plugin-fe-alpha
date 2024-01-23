@@ -13,11 +13,12 @@ let type = "";
 const filesToLint = [];
 
 const eslintInstances = {};
+
 function generateEslintInstances() {
   const lintnames = Object.keys(LibRulesAndConfigs.configsFilePaths);
 
-  for (let name of lintnames) {
-    let path = LibRulesAndConfigs.configsFilePaths[name].replace(
+  for (const name of lintnames) {
+    const path = LibRulesAndConfigs.configsFilePaths[name].replace(
       "./",
       "../lib/"
     );
@@ -34,7 +35,7 @@ function generateFileGroups() {
 }
 
 // 根据文件类型，命令行的type，eslintInstances字典，类确定具体某个文件使用的规则；type优先级最高
-function handleSelectWhichEslintInstances(type, fileType, eslintInstances) {
+function handleSelectWhichEslintInstances(type, eslintInstances) {
   return eslintInstances[type] || "";
 }
 
@@ -54,7 +55,6 @@ async function lintFiles(filePaths) {
     if (fileGroups[fileType].length > 0) {
       const whichEslintInstances = handleSelectWhichEslintInstances(
         type,
-        fileType,
         eslintInstances
       );
 
@@ -132,13 +132,13 @@ function handleExecLintRules() {
 }
 
 //  main 函数
-async function main() {
+function main() {
 
   // process argv参数处理  从命令行参数获取目录路径和 lint 类型
   handleProcessArgv();
 
   // 生成 ESLint 实例字典
-  await generateEslintInstances();
+  generateEslintInstances();
 
   // 生成 fileGroups，根据当前配置支持的 lint类型做的一个集合，后面的单个类型文件放到这里
   generateFileGroups();
