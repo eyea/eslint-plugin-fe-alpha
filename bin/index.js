@@ -22,7 +22,7 @@ function generateEslintInstances() {
       "./",
       "../lib/"
     );
-    eslintInstances[name] = new ESLint({ overrideConfigFile: `${path}.js`, });
+    eslintInstances[name] = new ESLint({ overrideConfigFile: `${path}.js`, useEslintrc: false});
   }
 
 }

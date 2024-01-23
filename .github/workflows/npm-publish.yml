@@ -21,6 +21,6 @@ jobs:
       - run: |
           npm install
           npm ci
-      - run: npm publish --provenance --access public --tag alpha.1
+      - run: npm publish --provenance --access public --tag alpha.2
         env:
           NODE_AUTH_TOKEN: ${{secrets.AFUTEAM_LINT_PUBLISH_NPM_TOKEN_ALPHA}}
