@@ -1,5 +1,9 @@
 # 忽略目录
 .github/
+node_modules/
+tests/
+tools/
+configs/
 
 # 忽略文件
 .prettierignore

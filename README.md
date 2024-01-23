@@ -79,9 +79,18 @@ npm i eslint @afuteam/eslint-plugin-fe-alpha --save-dev
   "extends": ["plugin:@afuteam/fe-alpha/vue3-ts"]
 }
 ```
-
 ## npx
-自测阶段
+beta阶段
+
+查看当前支持的类型，列出清单
 ```sh
-npx @afuteam/eslint-plugin-fe-alpha --type=react-ts --path=src/
+npx @afuteam/eslint-plugin-fe-alpha@latest --help=type
 ```
+
+使用
+```sh
+npx @afuteam/eslint-plugin-fe-alpha@latest --type=react-ts --path=src/
+```
+
+## 后续
+这个调试依赖包，后续改为 `@afuteam/eslint-plugin-fe`，请注意包名称的变化。
