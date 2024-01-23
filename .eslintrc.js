@@ -6,7 +6,7 @@ module.exports = {
     "eslint:recommended",
     "plugin:eslint-plugin/recommended",
     // TODO 这个会干扰bin的测试，为什么？
-    "plugin:node/recommended",
+    // "plugin:node/recommended",
   ],
   env: {
     node: true,

@@ -1,14 +1,16 @@
 {
   "name": "@afuteam/eslint-plugin-fe-alpha",
-  "version": "0.0.4-alpha.2",
+  "version": "0.0.4-alpha.3",
   "description": "AfuTeam ESLint Plugin",
   "main": "./lib/index.js",
-  "exports": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./lib/configs/": "./lib/configs/"
+  },
   "scripts": {
     "lint:all": "npm-run-all \"lint:*\"",
     "lint:js": "eslint .",
     "lint:test": "eslint tests/*",
-    "lint:test1": "eslint tests/*.ts --config ./lib/configs/ts/index.js",
     "test": "mocha tests --recursive"
   },
   "bin": {

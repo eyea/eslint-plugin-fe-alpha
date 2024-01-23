@@ -18,11 +18,9 @@ function generateEslintInstances() {
   const lintnames = Object.keys(LibRulesAndConfigs.configsFilePaths);
 
   for (const name of lintnames) {
-    const path = LibRulesAndConfigs.configsFilePaths[name].replace(
-      "./",
-      "../lib/"
-    );
-    eslintInstances[name] = new ESLint({ overrideConfigFile: `${path}.js`, useEslintrc: false});
+    const pathToConfigFile = require.resolve(`@afuteam/eslint-plugin-fe-alpha/lib/configs/${name}.js`);
+
+    eslintInstances[name] = new ESLint({ overrideConfigFile: pathToConfigFile, useEslintrc: false});
   }
 
 }
