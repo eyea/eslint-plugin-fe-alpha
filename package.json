@@ -1,11 +1,25 @@
 {
   "name": "@afuteam/eslint-plugin-fe-alpha",
-  "version": "0.0.4-alpha.3",
+  "version": "0.0.4-alpha.4",
   "description": "AfuTeam ESLint Plugin",
   "main": "./lib/index.js",
   "exports": {
     ".": "./lib/index.js",
-    "./lib/configs/": "./lib/configs/"
+    "./lib/configs/": "./lib/configs/",
+    "./lib/configs/js.js": "./lib/configs/js.js",
+    "./lib/configs/ts.js": "./lib/configs/ts/index.js",
+    "./lib/configs/vue2-js.js": "./lib/configs/vue2-js.js",
+    "./lib/configs/vue3-js.js": "./lib/configs/vue3-js.js",
+    "./lib/configs/react-js.js": "./lib/configs/react-js.js",
+    "./lib/configs/vue2-ts.js": "./lib/configs/vue2-ts/index.js",
+    "./lib/configs/vue3-ts.js": "./lib/configs/vue3-ts/index.js",
+    "./lib/configs/react-ts.js": "./lib/configs/react-ts/index.js",
+    "./lib/configs/ts4.js": "./lib/configs/ts/index.js",
+    "./lib/configs/ts5.js": "./lib/configs/ts/index.js",
+    "./lib/configs/vue2.js": "./lib/configs/vue2-js.js",
+    "./lib/configs/vue3.js": "./lib/configs/vue3-js.js",
+    "./lib/configs/react.js": "./lib/configs/react-js.js",
+    "./lib/configs/react16.js": "./lib/configs/react-js.js"
   },
   "scripts": {
     "lint:all": "npm-run-all \"lint:*\"",
