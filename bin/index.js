@@ -95,6 +95,15 @@ function handleProcessArgv() {
     }
   }
 
+  // 检查是否有 --help 参数
+  if (argv.help === 'type') {
+
+    console.log('当前支持的type类型: \n', Object.keys(LibRulesAndConfigs.configsFilePaths), '\n');
+    console.log('将要废弃、不建议使用: \n', Object.keys(LibRulesAndConfigs.ABANDON_configsFilePaths), '\n');
+
+    process.exit(0);   // 结束程序
+  }
+
   if (argv.path) {
     targetPath = argv.path;
   }
