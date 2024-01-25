@@ -1,6 +1,5 @@
 # @afuteam/eslint-plugin-fe-alpha
 
-
 ## 安装
 
 安装 [ESLint](https://eslint.org/) 和 `@afuteam/eslint-plugin-fe-alpha`:
@@ -9,7 +8,7 @@
 npm i eslint @afuteam/eslint-plugin-fe-alpha --save-dev
 ```
 
-## 使用
+## .eslintrc 文件使用
 
 在 `.eslintrc` 配置文件中, 引入 `@afuteam/eslint-plugin-fe-alpha` 插件
 
@@ -72,7 +71,7 @@ npm i eslint @afuteam/eslint-plugin-fe-alpha --save-dev
   "extends": ["plugin:@afuteam/fe-alpha/vue3-ts"]
 }
 ```
-## npx
+## npx方式使用
 查看当前支持的类型，列出清单
 ```sh
 npx @afuteam/eslint-plugin-fe-alpha@latest --help=type
@@ -83,5 +82,5 @@ npx @afuteam/eslint-plugin-fe-alpha@latest --help=type
 npx @afuteam/eslint-plugin-fe-alpha@latest --type=react-ts --path=src/
 ```
 
-## 后续
-这个调试依赖包，后续改为 `@afuteam/eslint-plugin-fe`，请注意包名称的变化。
+## 说明
+这个调试依赖包，作为 `@afuteam/eslint-plugin-fe` 的 **alpha** 版本，实验性功能会在这里进行，比如 **0.0.5** 版本已经内置对一些文件夹过滤 (.umi/locales/mock/e2e等)。
