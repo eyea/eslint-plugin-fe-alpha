@@ -5,8 +5,10 @@ const fs = require("fs");
 const path = require("path");
 const { ESLint } = require("eslint");
 const LibRulesAndConfigs = require("../lib/index"); // lib定义的规则名称集
-const supportFileExtNames = require("../tools/supportFileExtNames"); // 支持的文件类型名后缀集合
+const supportFileExtNames = require("../lib/execConfigs/supportFileExtNames"); // 支持的文件类型名后缀集合
+const BlackFilesList = require("../lib/execConfigs/BlackFilesList"); // 排除的路径集合
 
+// const BlackFilesListArr = []; // 已排除的目录列表
 let targetPath = "";
 let type = "";
 
@@ -83,12 +85,18 @@ async function lintFiles(filePaths) {
     }
   }
 
+  console.log('Total 排除目录列表:', BlackFilesList);
+  console.log('Total 支持文件类型:', supportFileExtNames);
+
   console.log('Total errors:', totalErrors);
   console.log('Total warnings:', totalWarnings);
 
 }
 
 function walkDir(dir, callback) {
+  // 黑名单目录排除
+  if(curPathIsBlackDirectory(dir)) return;
+
   fs.readdirSync(dir).forEach((f) => {
     const dirPath = path.join(dir, f);
     const isDirectory = fs.statSync(dirPath).isDirectory();
@@ -128,6 +136,17 @@ function handleProcessArgv() {
 function handleValidPathExtName(supportFileExtNames, targetPath) {
   const extname = path.extname(targetPath).slice(1);
   return !!supportFileExtNames.includes(extname);
+}
+
+// 路径是 黑名单
+function curPathIsBlackDirectory(targetPath) {
+  const basename = path.basename(targetPath);
+
+  let isBlackFile = BlackFilesList.includes(basename)
+  // if(isBlackFile) {
+  //   BlackFilesListArr.push(basename)
+  // }
+  return isBlackFile
 }
 
 // 遍历、执行lint逻辑
