@@ -41,6 +41,9 @@ function handleSelectWhichEslintInstances(type, eslintInstances) {
 
 async function lintFiles(filePaths) {
 
+  let totalErrors = 0;
+  let totalWarnings = 0;
+
   for (const filePath of filePaths) {
     const extName = path.extname(filePath).slice(1);
     if (fileGroups[extName]) {
@@ -71,10 +74,18 @@ async function lintFiles(filePaths) {
       const resultText = formatter.format(results);
 
       if (resultText) {
+        results.forEach(result => {
+          totalErrors += result.errorCount;
+          totalWarnings += result.warningCount;
+        });
         console.error(resultText);
       }
     }
   }
+
+  console.log('Total errors:', totalErrors);
+  console.log('Total warnings:', totalWarnings);
+
 }
 
 function walkDir(dir, callback) {
