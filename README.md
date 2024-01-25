@@ -1,10 +1,3 @@
-
-
-
-```diff
-- 框架+ts的情况 需要验证下是否可按照原来的方式组合用
-```
-
 # @afuteam/eslint-plugin-fe-alpha
 
 
@@ -55,7 +48,7 @@ npm i eslint @afuteam/eslint-plugin-fe-alpha --save-dev
 ```
 
 ```json
-// ts + react
+// ts + react 包含js规则
 {
   "extends": [
     "plugin:@afuteam/fe-alpha/react-ts"
@@ -65,7 +58,7 @@ npm i eslint @afuteam/eslint-plugin-fe-alpha --save-dev
 ```
 
 ```json
-// ts + vue2
+// ts + vue2 包含js规则
 {
   "plugins": ["@afuteam/fe-alpha"],
   "extends": ["plugin:@afuteam/fe-alpha/vue2-ts"]
@@ -73,15 +66,13 @@ npm i eslint @afuteam/eslint-plugin-fe-alpha --save-dev
 ```
 
 ```json
-// ts + vue3
+// ts + vue3 包含js规则
 {
   "plugins": ["@afuteam/fe-alpha"],
   "extends": ["plugin:@afuteam/fe-alpha/vue3-ts"]
 }
 ```
 ## npx
-beta阶段
-
 查看当前支持的类型，列出清单
 ```sh
 npx @afuteam/eslint-plugin-fe-alpha@latest --help=type
